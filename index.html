@@ -53,27 +53,28 @@
             <p>Aquí puedes integrar y probar tu chatbot.</p>
             <!-- Espacio para integrar un chatbot -->
             <div id="chatbot">
-                <script type="text/javascript">
-                    (function(d, t) {
-                        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                        v.onload = function() {
-                          window.voiceflow.chat.load({
-                            verify: { projectID: '67e2d755fe593021b4770dc9' },
-                            url: 'https://general-runtime.voiceflow.com',
-                            versionID: 'production',
-                            voice: {
-                              url: "https://runtime-api.voiceflow.com"
-                            }
-                          });
-                        }
-                        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-                    })(document, 'script');
-                  </script>
+                
             </div>
         </section>
     </main>
     <footer>
         <p>Creado por Alberto Díaz Antuña - 2025</p>
     </footer>
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '67e2d755fe593021b4770dc9' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
 </body>
 </html>
