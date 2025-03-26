@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página personal para pruebas de chatbots y elementos relacionados con IA.">
-    <title>Página de Pruebas de IA</title>
+    <title>Mydz - Innovación en IA</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #fff;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #FF6F00;
             color: white;
             padding: 1rem;
             text-align: center;
         }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+        }
         main {
             padding: 2rem;
+            text-align: center;
         }
         footer {
             background-color: #333;
@@ -34,27 +42,44 @@
         .chatbot-container {
             margin: 2rem auto;
             padding: 1rem;
-            border: 1px solid #ccc;
             border-radius: 8px;
             background-color: #fff;
             max-width: 600px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .chatbot-container img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Página de Pruebas de IA</h1>
-        <p>Explora y experimenta con chatbots y elementos relacionados con inteligencia artificial.</p>
+        <div class="logo">
+            <img src="https://via.placeholder.com/40" alt="Logo de Mydz">
+            <span>Mydz</span>
+        </div>
+        <p>Innovación en Inteligencia Artificial</p>
     </header>
     <main>
         <section class="chatbot-container">
             <h2>Prueba de Chatbot</h2>
             <p>Aquí puedes integrar y probar tu chatbot.</p>
-            <!-- Espacio para integrar un chatbot -->
-            <div id="chatbot">
-                
-            </div>
+            <img src="https://via.placeholder.com/600x400?text=Robot+IA" alt="Robot gestionado por IA">
         </section>
     </main>
     <footer>
@@ -75,6 +100,6 @@
             }
             v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
         })(document, 'script');
-      </script>
+    </script>
 </body>
 </html>
