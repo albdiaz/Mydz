@@ -17,14 +17,26 @@
             background-color: #FF6F00;
             color: white;
             padding: 1rem;
-            text-align: center;
+            display: flex; /* Cambiar a diseño flexible */
+            align-items: center; /* Alinear verticalmente */
+            justify-content: space-between; /* Espaciado entre elementos */
         }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         header p {
-            margin: 0.5rem 0 0;
+            margin: 0;
+            font-size: 1rem;
         }
         main {
             padding: 2rem;
@@ -51,20 +63,6 @@
             max-width: 100%;
             border-radius: 8px;
         }
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        .logo img {
-            width: 40px;
-            height: 40px;
-        }
-        .logo span {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -77,8 +75,8 @@
     </header>
     <main>
         <section class="chatbot-container">
-            <h2>Prueba de Chatbot</h2>
-            <p>Aquí puedes integrar y probar tu chatbot.</p>
+            <h2>Chatbot Demos</h2>
+            <p>Puedes probar tu chatbot.</p>
             <img src="assets/imagen_index.png" alt="Imagen principal de la web">
         </section>
     </main>
