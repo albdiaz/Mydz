@@ -17,26 +17,14 @@
             background-color: #FF6F00;
             color: white;
             padding: 1rem;
-            display: flex; /* Cambiar a diseño flexible */
-            align-items: center; /* Alinear verticalmente */
-            justify-content: space-between; /* Espaciado entre elementos */
+            text-align: center;
         }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo img {
-            width: 40px;
-            height: 40px;
-        }
-        .logo span {
-            font-size: 1.5rem;
-            font-weight: bold;
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
         }
         header p {
-            margin: 0;
-            font-size: 1rem;
+            margin: 0.5rem 0 0;
         }
         main {
             padding: 2rem;
@@ -63,6 +51,20 @@
             max-width: 100%;
             border-radius: 8px;
         }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -84,20 +86,22 @@
         <p>Creado por Alberto Díaz Antuña - 2025</p>
     </footer>
     <script type="text/javascript">
-        (function(d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function() {
-              window.voiceflow.chat.load({
-                verify: { projectID: '67e2d755fe593021b4770dc9' },
-                url: 'https://general-runtime.voiceflow.com',
-                versionID: 'production',
-                voice: {
-                  url: "https://runtime-api.voiceflow.com"
-                }
-              });
-            }
-            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-        })(document, 'script');
+        <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '67e2d755fe593021b4770dc9' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
     </script>
 </body>
 </html>
