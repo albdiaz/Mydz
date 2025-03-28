@@ -114,17 +114,49 @@
             fileList.appendChild(li);
         });
 
-        // Simular la carga del contenido del archivo
+        // Cargar el contenido real del archivo
         function loadFile(fileName) {
-            // Aquí puedes reemplazar esto con una llamada AJAX para cargar el contenido real del archivo
-            editor.textContent = `Contenido del archivo ${fileName} cargado aquí...`;
+            fetch(`docs/${fileName}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`No se pudo cargar el archivo: ${fileName}`);
+                    }
+                    return response.text();
+                })
+                .then(content => {
+                    editor.textContent = content; // Cargar el contenido en el editor
+                })
+                .catch(error => {
+                    alert(`Error al cargar el archivo: ${error.message}`);
+                });
         }
 
-        // Simular la funcionalidad de guardar
+        // Guardar el contenido editado del archivo
         saveButton.addEventListener("click", () => {
             const content = editor.textContent;
-            alert(`El contenido del archivo se ha guardado:\n\n${content}`);
-            // Aquí puedes reemplazar esto con una llamada AJAX para guardar el contenido en el servidor
+            const fileName = document.querySelector(".file-list a.active")?.textContent;
+
+            if (!fileName) {
+                alert("Por favor, selecciona un archivo antes de guardar.");
+                return;
+            }
+
+            fetch(`docs/${fileName}`, {
+                method: "PUT", // Cambiar a POST si el servidor no soporta PUT
+                headers: {
+                    "Content-Type": "text/plain"
+                },
+                body: content
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`No se pudo guardar el archivo: ${fileName}`);
+                    }
+                    alert(`El archivo ${fileName} se ha guardado correctamente.`);
+                })
+                .catch(error => {
+                    alert(`Error al guardar el archivo: ${error.message}`);
+                });
         });
     </script>
 </body>
