@@ -11,25 +11,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
             height: 100vh;
-        }
-        header {
-            background-color: #FF6F00;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-        }
-        .main-container {
-            display: flex;
-            flex: 1;
         }
         .sidebar {
             width: 250px;
@@ -76,16 +58,22 @@
             padding: 2rem;
             overflow-y: auto;
         }
-        .content iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .content h1 {
+            font-size: 2rem;
+            color: #FF6F00;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            line-height: 1.6;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
         .toggle {
             cursor: pointer;
@@ -93,50 +81,38 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/Mydz_logo.png" alt="Logo de Mydz" style="width: 40px; height: 40px; vertical-align: middle;">
-            <span style="font-size: 1.5rem; font-weight: bold;">Mydz</span>
-        </div>
-        <p>Base de Conocimiento</p>
-    </header>
-    <div class="main-container">
-        <div class="sidebar">
-            <h2>Base de Conocimiento</h2>
-            <ul>
-                <li>
-                    <span class="toggle">Inteligencia Artificial</span>
-                    <ul>
-                        <li><a href="ia-introduccion.html" target="content-frame">Introducción a la IA</a></li>
-                        <li><a href="ia-aplicaciones.html" target="content-frame">Aplicaciones de la IA</a></li>
-                        <li><a href="ia-etica.html" target="content-frame">Ética en la IA</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="toggle">Desarrollo Web</span>
-                    <ul>
-                        <li><a href="html-basico.html" target="content-frame">HTML Básico</a></li>
-                        <li><a href="css-avanzado.html" target="content-frame">CSS Avanzado</a></li>
-                        <li><a href="javascript-fundamentos.html" target="content-frame">Fundamentos de JavaScript</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="toggle">Recursos Adicionales</span>
-                    <ul>
-                        <li><a href="recursos-libros.html" target="content-frame">Libros Recomendados</a></li>
-                        <li><a href="recursos-cursos.html" target="content-frame">Cursos en Línea</a></li>
-                        <li><a href="recursos-herramientas.html" target="content-frame">Herramientas Útiles</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="content">
-            <iframe name="content-frame"></iframe>
-        </div>
+    <div class="sidebar">
+        <h2>Base de Conocimiento</h2>
+        <ul>
+            <li>
+                <span class="toggle">Comenzmos</span>
+                <ul>
+                    <li><a href="/docs/bienvenida.html" target="content-frame">Bienvenida</a></li>
+                    <li><a href="ia-aplicaciones.html" target="content-frame">Aplicaciones de la IA</a></li>
+                    <li><a href="ia-etica.html" target="content-frame">Ética en la IA</a></li>
+                </ul>
+            </li>
+            <li>
+                <span class="toggle">Desarrollo Web</span>
+                <ul>
+                    <li><a href="html-basico.html" target="content-frame">HTML Básico</a></li>
+                    <li><a href="css-avanzado.html" target="content-frame">CSS Avanzado</a></li>
+                    <li><a href="javascript-fundamentos.html" target="content-frame">Fundamentos de JavaScript</a></li>
+                </ul>
+            </li>
+            <li>
+                <span class="toggle">Recursos Adicionales</span>
+                <ul>
+                    <li><a href="recursos-libros.html" target="content-frame">Libros Recomendados</a></li>
+                    <li><a href="recursos-cursos.html" target="content-frame">Cursos en Línea</a></li>
+                    <li><a href="recursos-herramientas.html" target="content-frame">Herramientas Útiles</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
-    <footer>
-        <p>Creado por Alberto Díaz Antuña - 2025</p>
-    </footer>
+    <div class="content">
+        <iframe name="content-frame" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
     <script>
         // Seleccionar todos los elementos con la clase "toggle"
         const toggles = document.querySelectorAll('.toggle');
