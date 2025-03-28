@@ -41,6 +41,18 @@
         .sidebar ul li a:hover {
             text-decoration: underline;
         }
+        .sidebar ul li ul {
+            margin-left: 1rem;
+            list-style: none;
+            padding: 0;
+            display: none; /* Ocultar subenlaces por defecto */
+        }
+        .sidebar ul li ul li {
+            margin: 0.3rem 0;
+        }
+        .sidebar ul li ul li a {
+            font-weight: normal;
+        }
         .content {
             flex: 1;
             padding: 2rem;
@@ -63,22 +75,59 @@
             bottom: 0;
             width: 100%;
         }
+        .toggle {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <h2>Base de Conocimiento</h2>
         <ul>
-            <li><a href="ia-introduccion.html" target="content-frame">Introducción a la IA</a></li>
-            <li><a href="ia-aplicaciones.html" target="content-frame">Aplicaciones de la IA</a></li>
-            <li><a href="ia-etica.html" target="content-frame">Ética en la IA</a></li>
-            <li><a href="html-basico.html" target="content-frame">HTML Básico</a></li>
-            <li><a href="css-avanzado.html" target="content-frame">CSS Avanzado</a></li>
-            <li><a href="javascript-fundamentos.html" target="content-frame">Fundamentos de JavaScript</a></li>
+            <li>
+                <span class="toggle">Inteligencia Artificial</span>
+                <ul>
+                    <li><a href="ia-introduccion.html" target="content-frame">Introducción a la IA</a></li>
+                    <li><a href="ia-aplicaciones.html" target="content-frame">Aplicaciones de la IA</a></li>
+                    <li><a href="ia-etica.html" target="content-frame">Ética en la IA</a></li>
+                </ul>
+            </li>
+            <li>
+                <span class="toggle">Desarrollo Web</span>
+                <ul>
+                    <li><a href="html-basico.html" target="content-frame">HTML Básico</a></li>
+                    <li><a href="css-avanzado.html" target="content-frame">CSS Avanzado</a></li>
+                    <li><a href="javascript-fundamentos.html" target="content-frame">Fundamentos de JavaScript</a></li>
+                </ul>
+            </li>
+            <li>
+                <span class="toggle">Recursos Adicionales</span>
+                <ul>
+                    <li><a href="recursos-libros.html" target="content-frame">Libros Recomendados</a></li>
+                    <li><a href="recursos-cursos.html" target="content-frame">Cursos en Línea</a></li>
+                    <li><a href="recursos-herramientas.html" target="content-frame">Herramientas Útiles</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
     <div class="content">
         <iframe name="content-frame" style="width: 100%; height: 100%; border: none;"></iframe>
     </div>
+    <script>
+        // Seleccionar todos los elementos con la clase "toggle"
+        const toggles = document.querySelectorAll('.toggle');
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                // Alternar la visibilidad del siguiente elemento <ul>
+                const subMenu = toggle.nextElementSibling;
+                if (subMenu.style.display === 'block') {
+                    subMenu.style.display = 'none';
+                } else {
+                    subMenu.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
