@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de conocimiento con enlaces agrupados por categoría.">
+    <title>Conocimiento - Mydz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #FF6F00;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+        }
+        .breadcrumbs {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 0.9rem;
+        }
+        .breadcrumbs a {
+            color: white;
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+        }
+        .category {
+            margin-bottom: 2rem;
+        }
+        .category h2 {
+            font-size: 1.5rem;
+            color: #FF6F00;
+            margin-bottom: 1rem;
+        }
+        .category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .category ul li {
+            margin: 0.5rem 0;
+        }
+        .category ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .category ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <span>Conocimiento</span>
+        </div>
+        <h1>Conocimiento</h1>
+        <p>Explora enlaces agrupados por categoría</p>
+    </header>
+    <main>
+        <section class="category">
+            <h2>Inteligencia Artificial</h2>
+            <ul>
+                <li><a href="ia-introduccion.html">Introducción a la IA</a></li>
+                <li><a href="ia-aplicaciones.html">Aplicaciones de la IA</a></li>
+                <li><a href="ia-etica.html">Ética en la IA</a></li>
+            </ul>
+        </section>
+        <section class="category">
+            <h2>Desarrollo Web</h2>
+            <ul>
+                <li><a href="html-basico.html">HTML Básico</a></li>
+                <li><a href="css-avanzado.html">CSS Avanzado</a></li>
+                <li><a href="javascript-fundamentos.html">Fundamentos de JavaScript</a></li>
+            </ul>
+        </section>
+        <section class="category">
+            <h2>Recursos Adicionales</h2>
+            <ul>
+                <li><a href="recursos-libros.html">Libros Recomendados</a></li>
+                <li><a href="recursos-cursos.html">Cursos en Línea</a></li>
+                <li><a href="recursos-herramientas.html">Herramientas Útiles</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Creado por Alberto Díaz Antuña - 2025</p>
+    </footer>
+</body>
+</html>
