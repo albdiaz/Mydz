@@ -9,6 +9,9 @@
 </head>
 <body>
     <header>
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <span>Recursos</span>
+        </div>
         <div class="logo">
             <img src="assets/Mydz_logo.png" alt="Logo de Mydz" style="width: 40px; height: 40px; vertical-align: middle;">
             <span style="font-size: 1.5rem; font-weight: bold;">Mydz</span>
@@ -22,13 +25,13 @@
                 <li>
                     <span class="toggle">Documentación</span>
                     <ul>
-                        <li><a href="recursos.html/recursosTecnicos.html" target="content-frame">Bienvenida</a></li>
+                        <li><a href="docs/bienvenida.html" target="content-frame">Bienvenida</a></li>
                         <li><a href="ia-aplicaciones.html" target="content-frame">Aplicaciones de la IA</a></li>
                         <li><a href="ia-etica.html" target="content-frame">Ética en la IA</a></li>
                     </ul>
                 </li>
                 <li>
-                    <span class="toggle">GitHub</span>
+                    <span class="toggle">Desarrollo Web</span>
                     <ul>
                         <li><a href="html-basico.html" target="content-frame">HTML Básico</a></li>
                         <li><a href="css-avanzado.html" target="content-frame">CSS Avanzado</a></li>
@@ -53,18 +56,11 @@
         <p>Creado por Alberto Díaz Antuña - 2025</p>
     </footer>
     <script>
-        // Seleccionar todos los elementos con la clase "toggle"
         const toggles = document.querySelectorAll('.toggle');
-
         toggles.forEach(toggle => {
             toggle.addEventListener('click', () => {
-                // Alternar la visibilidad del siguiente elemento <ul>
                 const subMenu = toggle.nextElementSibling;
-                if (subMenu.style.display === 'block') {
-                    subMenu.style.display = 'none';
-                } else {
-                    subMenu.style.display = 'block';
-                }
+                subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
             });
         });
     </script>

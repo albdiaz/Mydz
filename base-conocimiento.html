@@ -9,6 +9,9 @@
 </head>
 <body>
     <header>
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <span>Base de Conocimiento</span>
+        </div>
         <div class="logo">
             <img src="assets/Mydz_logo.png" alt="Logo de Mydz" style="width: 40px; height: 40px; vertical-align: middle;">
             <span style="font-size: 1.5rem; font-weight: bold;">Mydz</span>
@@ -53,18 +56,11 @@
         <p>Creado por Alberto Díaz Antuña - 2025</p>
     </footer>
     <script>
-        // Seleccionar todos los elementos con la clase "toggle"
         const toggles = document.querySelectorAll('.toggle');
-
         toggles.forEach(toggle => {
             toggle.addEventListener('click', () => {
-                // Alternar la visibilidad del siguiente elemento <ul>
                 const subMenu = toggle.nextElementSibling;
-                if (subMenu.style.display === 'block') {
-                    subMenu.style.display = 'none';
-                } else {
-                    subMenu.style.display = 'block';
-                }
+                subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
             });
         });
     </script>
