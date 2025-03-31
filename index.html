@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página personal para pruebas de chatbots y elementos relacionados con IA.">
+    <meta name="description" content="Página corporativa de Mydz.">
     <title>Mydz - Innovación en IA</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="style/estilos.css">
 </head>
 <body>
     <header>
@@ -15,53 +15,21 @@
         </div>
         <p>Innovación en Inteligencia Artificial</p>
     </header>
+    <nav class="menu">
+        <a href="pages/quienes-somos.html">Quienes Somos</a>
+        <a href="pages/nuestros-productos.html">Nuestros Productos</a>
+        <a href="pages/localizacion.html">Localización</a>
+        <a href="pages/talento.html">Talento</a>
+        <a href="pages/contacto.html">Contacto</a>
+    </nav>
     <main>
-        <section class="chatbot-container">
-            <h2>Chatbot Demos</h2>
-            <p>Puedes probar tu chatbot.</p>
-            <img src="assets/imagen_index.png" alt="Imagen principal de la web">
-        </section>
-        <section class="links-section">
-            <h2>Enlaces</h2>
-            <a href="asistente-gimnasio.html">Asistente de Gimnasio</a>
-            <a href="base-conocimiento.html">Base de Conocimiento</a>
-            <a href="recursos.html">Recursos técnicos utilizados</a>
-            <a href="editor.html">Editor de Archivos</a>
-        </section>
-        <section class="carousel">
-            <img src="assets/imagen1.png" alt="Imagen 1" class="active">
-            <img src="assets/imagen2.png" alt="Imagen 2">
-            <img src="assets/imagen3.png" alt="Imagen 3">
-            <div class="carousel-controls">
-                <button id="prev">❮</button>
-                <button id="next">❯</button>
-            </div>
+        <section>
+            <h2>Bienvenidos a Mydz</h2>
+            <p>Explora nuestras soluciones innovadoras en inteligencia artificial y descubre cómo podemos ayudarte a transformar tu negocio.</p>
         </section>
     </main>
     <footer>
         <p>Creado por Alberto Díaz Antuña - 2025</p>
     </footer>
-    <script>
-        const images = document.querySelectorAll('.carousel img');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        let currentIndex = 0;
-
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
-            });
-        }
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            showImage(currentIndex);
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            showImage(currentIndex);
-        });
-    </script>
 </body>
 </html>
